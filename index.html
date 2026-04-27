@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>DFA Scanner Visualizer</title>
+
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <main class="app">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">Compiler Design Lab 2</p>
+        <h1>DFA Scanner Visualizer</h1>
+        <p class="subtitle">
+          A visual lexical analyzer that transforms source code into a structured token stream.
+        </p>
+      </div>
+
+      <div class="hero-badge">
+        <span>Scanner</span>
+        <strong>Web Edition</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="editor-card">
+        <div class="card-header">
+          <h2>Source Code</h2>
+          <button id="exampleBtn">Load Example</button>
+        </div>
+
+        <textarea id="sourceInput" spellcheck="false" placeholder="Type your source code here..."></textarea>
+
+        <div class="actions">
+          <button id="scanBtn" class="primary-btn">Scan Tokens</button>
+          <button id="clearBtn" class="ghost-btn">Clear</button>
+        </div>
+      </div>
+
+      <div class="result-card">
+        <div class="card-header">
+          <h2>Token Stream</h2>
+          <span id="tokenCount">0 tokens</span>
+        </div>
+
+        <div id="tokenList" class="token-list empty">
+          No tokens generated yet.
+        </div>
+      </div>
+    </section>
+
+    <section class="dfa-card">
+      <h2>DFA Scanning Process</h2>
+      <div id="stepList" class="step-list empty">
+        The DFA transition process will be displayed here after scanning.
+      </div>
+    </section>
+  </main>
+
+  <script src="./scanner.js"></script>
+</body>
+</html>
